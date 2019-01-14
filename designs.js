@@ -12,7 +12,7 @@ function makeGrid() {
   var columns = 'grid-template-columns: ';//start of CSS style text for columns
   var height = submitButton.inputHeight.value;// variable height is defined from the form input
   var width = submitButton.inputWidth.value;// variable width is defined from the form input
-  canvas.innerHTML = "" // reset the canvas to blank
+  canvas.innerHTML = ""; // reset the canvas to blank
   canvas.insertAdjacentHTML('beforeend','<div class="grid-container">');//this is blank container
   const grid = document.getElementsByClassName('grid-container');//constant defined for the grid
   for (var r = 1; r<= width; r++){
@@ -24,6 +24,6 @@ function makeGrid() {
       }
   }
 // These listeners trigger the grid build, color selection, and box fill
-submitButton.addEventListener("submit",function (){makeGrid()},false)
+submitButton.addEventListener("submit",function (){makeGrid()},false);
 colorSelector.addEventListener("change",function (assignColor){fillColor = colorSelector.value},false);
-canvas.addEventListener('click',function(e){e.path[0].style.backgroundColor = fillColor},false)
+canvas.addEventListener('click',function(e){e.path[0].style.backgroundColor = fillColor},false);
